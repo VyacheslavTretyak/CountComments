@@ -1,0 +1,30 @@
+﻿<Window x:Class="CountComments.OpenDirectoryDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CountComments"
+        mc:Ignorable="d"
+		xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="14"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"        
+        Title="Open Directory Dialog" Height="320" Width="250">
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="3*"/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+		<TreeView Name="Tree" MinWidth="220">
+			
+			
+			
+		</TreeView>
+		<Button Grid.Row="1" Style="{StaticResource MaterialDesignRaisedDarkButton}">Open</Button>
+        
+    </Grid>
+</Window>

@@ -4,9 +4,28 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CountComments"
+		 xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="14"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Count Comments" Height="320" Width="250" ResizeMode="NoResize">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition Height="2*"/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+		<TextBlock Name="TextBlockLines" Grid.Row="0" Style="{StaticResource MaterialDesignHeadlineTextBlock}" Margin="10">Lines : 0</TextBlock>
+		<TextBlock Name="TextBlockComments" Grid.Row="1" Style="{StaticResource MaterialDesignHeadlineTextBlock}" Margin="10">Comments : 0</TextBlock>
+		<materialDesign:Card Grid.Row="2" Margin="14">
+			<TextBlock Name="TextBlockPersent" Style="{StaticResource MaterialDesignDisplay2TextBlock}" Margin="14" HorizontalAlignment="Center">0%</TextBlock>
+		</materialDesign:Card>
+		<Button Name="BtnOpen" Grid.Row="3" HorizontalAlignment="Right"  Margin="10">Open Solution</Button>
+	</Grid>
 </Window>
